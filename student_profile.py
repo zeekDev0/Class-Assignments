@@ -1,14 +1,17 @@
-name = 'Ezekiel'
-age = 26
-is_enrolled = True
-currentstudy_hours = 2
-weekly_study_hours = 20
+name = str(input('What is your name? '))
+course = str(input('What are you interested in studying? '))
+weekly_study_hours = int(input('How many hours do you want to study per week? '))
+current_study_hours = int(input('How many hours have you studied this week? '))
+study_hours_left = weekly_study_hours - current_study_hours
+if study_hours_left < 0:
+    print(f"You have exceeded your weekly study hours by {-study_hours_left} hours.")
+    study_hours_left = 0
 
-print(type(name))
-print(f"Age: {age}")
-print(f"Is Enrolled: {is_enrolled}")
-print(f"Current Study Hours: {currentstudy_hours}")
-print(f"Remaining Study Hours: {weekly_study_hours - currentstudy_hours}")
+print("\nSTUDENT PROFILE")
+print(f"Name: {name}")
+print(f"Course: {course}")
+print(f"Current Study Hours: {current_study_hours}")
+print(f"Remaining Study Hours: {study_hours_left} out of {weekly_study_hours} hours for the week.")
 
 
 
