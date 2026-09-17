@@ -4,6 +4,10 @@ weekly_study_hours = float(input("What is your goal for weekly study hours? "))
 current_study_hours = float(input("How many hours have you studied this week? "))
 remaining_study_hours = (weekly_study_hours - current_study_hours)
 remaining_study_percentage = (remaining_study_hours / weekly_study_hours) * 100
+if remaining_study_hours < 0:
+    print(f"You have exceeded your weekly study goal by {-remaining_study_hours} hours.")
+    remaining_study_hours = 0
+    remaining_study_percentage = 0
 print(f'\n STUDY TRACKER')
 print(f'Name: {student_name}')
 print(f'Age: {age}')
